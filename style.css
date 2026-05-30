@@ -181,30 +181,53 @@ body {
   border-radius: 4px;
 }
 
-.logo-text {
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.logo-title {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.logo-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
   white-space: nowrap;
 }
 
 @media (max-width: 1024px) {
-  .logo-text {
-    font-size: 1rem;
+  .logo-title {
+    font-size: 1.2rem;
+  }
+  .logo-subtitle {
+    font-size: 0.65rem;
   }
 }
 
 @media (max-width: 768px) {
-  .logo-text {
-    font-size: 0.9rem;
-    white-space: normal;
-    line-height: 1.2;
+  .logo-title {
+    font-size: 1.1rem;
+  }
+  .logo-subtitle {
+    font-size: 0.62rem;
   }
 }
 
 @media (max-width: 480px) {
-  .logo-text {
-    font-size: 0.8rem;
+  .logo-subtitle {
+    display: none;
   }
 }
 
