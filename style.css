@@ -139,6 +139,11 @@ body {
   width: 100%;
 }
 
+.btn--large {
+  padding: 20px 48px;
+  font-size: 1.1rem;
+}
+
 .btn svg {
   width: 20px;
   height: 20px;
@@ -227,7 +232,10 @@ body {
 
 @media (max-width: 480px) {
   .logo-subtitle {
-    display: none;
+    display: block;
+    white-space: normal;
+    font-size: 0.58rem;
+    max-width: 150px;
   }
 }
 
@@ -795,6 +803,8 @@ body {
     text-align: center;
     z-index: 99;
     animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
   
   .header__hamburger.active span:nth-child(1) {
@@ -807,13 +817,116 @@ body {
     transform: translateY(-7px) rotate(-45deg);
   }
   
-  .hero__title { font-size: 2.5rem; }
-  .hero__actions { flex-direction: column; }
+  .section {
+    padding: 60px 0;
+  }
   
-  .section-title { font-size: 2.5rem; }
-  .services__grid { grid-template-columns: 1fr; }
-  .metrics__grid { grid-template-columns: 1fr; }
-  .footer__grid { grid-template-columns: 1fr; }
+  .hero {
+    min-height: auto;
+    padding: 140px 0 60px;
+  }
+  
+  .hero__scroll-indicator {
+    display: none;
+  }
+  
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+  }
+  
+  .hero__actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .btn--large {
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+  }
+  
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card {
+    padding: 30px 20px;
+  }
+  
+  .service-card__bullets {
+    margin-bottom: 24px;
+  }
+  
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+  
+  .metrics__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .cta__title {
+    font-size: 2.2rem;
+  }
+  
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .footer__bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cta__title {
+    font-size: 1.8rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
 }
 
 @keyframes slideDown {
